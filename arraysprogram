@@ -1,0 +1,63 @@
+class Program
+    {
+    public void test(int []n)
+        {
+            Console.WriteLine("passing in method");
+            Array.Reverse(n);
+            foreach(int i in n)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        static void Main(string[] args)
+        {
+
+            int[] arr = new int[] { 1, 2,3,4 };
+
+            Console.WriteLine(arr.Length);
+            // int[] arr = new int[7];
+            arr = new int[4] { 2, 8, 6, 8 };
+            Console.WriteLine(arr.Length);
+
+            for(int i=0;i<arr.Length;i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Array.Sort(arr);
+            Console.WriteLine("Array sorting");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Console.WriteLine("Array Reverse");
+            Array.Reverse(arr);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Console.WriteLine("Array Rank");
+            Console.WriteLine(arr.Rank.ToString());
+
+            Console.WriteLine(arr.Length);
+            Console.WriteLine("Array Cantains");
+            bool a=arr.Contains(4);
+            Console.WriteLine(a);
+
+            foreach(int i in arr) //foreach loop
+            {
+                Console.WriteLine(i);
+            }
+         
+            int[] arr1 = arr;
+            foreach (int i in arr1) //foreach loop
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("index of array");
+            Console.WriteLine(Array.IndexOf(arr, 8));
+            Program p = new Program();
+            p.test(arr);
+           
+            Console.ReadKey();
+        }
+    }
